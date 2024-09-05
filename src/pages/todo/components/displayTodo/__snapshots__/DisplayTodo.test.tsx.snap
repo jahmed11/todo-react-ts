@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayTodo Component renders correctly with todos and matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="todos-container"
+  >
+    <div>
+      <span>
+        Todo 1
+      </span>
+      <button>
+        Delete
+      </button>
+    </div>
+    <div>
+      <span>
+        Todo 2
+      </span>
+      <button>
+        Delete
+      </button>
+    </div>
+    <div>
+      <span>
+        Todo 3
+      </span>
+      <button>
+        Delete
+      </button>
+    </div>
+    <div>
+      <span>
+        Todo 4
+      </span>
+      <button>
+        Delete
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

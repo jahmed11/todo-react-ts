@@ -1,0 +1,7 @@
+.todo-form-container {
+    display: flex;
+    gap: 10px;
+    width: 400px;
+    margin: 0 auto;
+    flex-direction: row;
+}

@@ -1,0 +1,14 @@
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:hover,
+.input-field:focus {
+  border-color: var(--color-primary);
+}
