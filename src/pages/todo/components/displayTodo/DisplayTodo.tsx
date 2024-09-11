@@ -13,7 +13,7 @@ const DisplayTodo = () => {
     dispatch(deleteTodo(id));
   };
 
-  const rendeTodoList = (items: TodoProps[]) => {
+  const renderTodoList = (items: TodoProps[]) => {
     if (!items.length) {
       return <div className={styles["todos-list--empty"]}>Please Add your todos</div>;
     }
@@ -21,6 +21,7 @@ const DisplayTodo = () => {
     return todoItems.map((todoItem: TodoProps, index: number) => {
       return (
         <Todo
+          key={todoItem.id}
           index={index}
           text={todoItem.text}
           id={todoItem.id}
@@ -33,7 +34,7 @@ const DisplayTodo = () => {
   return (
     <div className={styles["todos-container"]}>
       <h2>Todo List</h2>
-      <div className={styles["todos-list"]}>{rendeTodoList(todoItems)}</div>
+      <div className={styles["todos-list"]}>{renderTodoList(todoItems)}</div>
     </div>
   );
 };
