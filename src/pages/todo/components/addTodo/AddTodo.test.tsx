@@ -5,15 +5,6 @@ import AddTodo from './AddTodo';
 import { addTodo } from 'pages/todo/reducer/todoReducer'; 
 
 
-jest.mock('./TodoForm', () => ({
-  __esModule: true,
-  default: ({ onTodoClick, value, onInputChange }: any) => (
-    <form>
-      <input type="text" value={value} onChange={onInputChange} />
-      <button type="button" onClick={onTodoClick}>Add Todo</button>
-    </form>
-  ),
-}));
 
 describe('AddTodo Component', () => {
   it('renders correctly', () => {

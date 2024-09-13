@@ -3,15 +3,6 @@ import { renderWithProviders } from 'utils/testUtils';
 import DisplayTodo from './DisplayTodo';
 import { deleteTodo } from 'pages/todo/reducer/todoReducer';
 
-jest.mock('./Todo', () => ({
-  __esModule: true,
-  default: ({ text, id, onTodoDeleteClick }: any) => (
-    <div>
-      <span>{text}</span>
-      <button onClick={() => onTodoDeleteClick(id)}>Delete</button>
-    </div>
-  ),
-}));
 
 describe('DisplayTodo Component', () => {
   const preloadedState = {

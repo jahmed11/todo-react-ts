@@ -5,37 +5,104 @@ exports[`DisplayTodo Component renders correctly with todos and matches the snap
   <div
     class="todos-container"
   >
-    <div>
-      <span>
-        Todo 1
-      </span>
-      <button>
-        Delete
-      </button>
-    </div>
-    <div>
-      <span>
-        Todo 2
-      </span>
-      <button>
-        Delete
-      </button>
-    </div>
-    <div>
-      <span>
-        Todo 3
-      </span>
-      <button>
-        Delete
-      </button>
-    </div>
-    <div>
-      <span>
-        Todo 4
-      </span>
-      <button>
-        Delete
-      </button>
+    <h2>
+      Todo List
+    </h2>
+    <div
+      class="todos-list"
+    >
+      <div
+        class="todo-item"
+      >
+        <span
+          class="todo-item__number"
+        >
+          1.
+        </span>
+        <span
+          class="todo-item__text"
+        >
+          Todo 1
+        </span>
+        <span
+          class="todo-item__action"
+        >
+          <button
+            class="button button--danger"
+          >
+            Delete
+          </button>
+        </span>
+      </div>
+      <div
+        class="todo-item"
+      >
+        <span
+          class="todo-item__number"
+        >
+          2.
+        </span>
+        <span
+          class="todo-item__text"
+        >
+          Todo 2
+        </span>
+        <span
+          class="todo-item__action"
+        >
+          <button
+            class="button button--danger"
+          >
+            Delete
+          </button>
+        </span>
+      </div>
+      <div
+        class="todo-item"
+      >
+        <span
+          class="todo-item__number"
+        >
+          3.
+        </span>
+        <span
+          class="todo-item__text"
+        >
+          Todo 3
+        </span>
+        <span
+          class="todo-item__action"
+        >
+          <button
+            class="button button--danger"
+          >
+            Delete
+          </button>
+        </span>
+      </div>
+      <div
+        class="todo-item"
+      >
+        <span
+          class="todo-item__number"
+        >
+          4.
+        </span>
+        <span
+          class="todo-item__text"
+        >
+          Todo 4
+        </span>
+        <span
+          class="todo-item__action"
+        >
+          <button
+            class="button button--danger"
+          >
+            Delete
+          </button>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
