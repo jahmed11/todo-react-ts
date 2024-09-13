@@ -10,13 +10,13 @@ interface TodoFormProps {
 }
 
 const TodoForm: FC<TodoFormProps> = ({ addTodoHandler, value, inputHandler }) => {
-  const onSumbit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     addTodoHandler();
   };
 
   return (
-    <form onSubmit={onSumbit}>
+    <form onSubmit={onSubmit}>
       <div className={styles["todo-form-container"]}>
         <Input placeholder="add todo" value={value} onChange={inputHandler} />
         <Button type="submit" variant="primary">
