@@ -1,27 +1,19 @@
 import { useAppSelector, useAppDispatch } from "hooks/reduxHooks";
-import { useState, useEffect } from "react";
 import { deleteTodo } from "pages/todo/reducer/todoReducer";
-import { todoItemsSelector } from "pages/todo/reducer/selectors";
+import { sortedTodoItemsSelector } from "pages/todo/reducer/selectors";
 import Todo from "./Todo";
 import styles from "./displayTodo.module.css";
 import { TodoProps } from "types/todo";
 
 const DisplayTodo = () => {
   const dispatch = useAppDispatch();
-  const todoItems = useAppSelector(todoItemsSelector);
-  const [sortedTodos, setSortedTodos] = useState<TodoProps[]>([]);
+  const todoItems = useAppSelector(sortedTodoItemsSelector);
+
 
   const onTodoDeleteClick = (id: number) => {
     dispatch(deleteTodo(id));
   };
 
-  useEffect(() => {
-    const copy = JSON.parse(JSON.stringify(todoItems)) as TodoProps[];
-    const sortedItems = copy.sort((a, b) => {
-      return a.text.localeCompare(b.text);
-    }) as TodoProps[];
-    setSortedTodos(sortedItems);
-  }, [todoItems]);
 
   const renderTodoList = (items: TodoProps[]) => {
     if (!items.length) {
@@ -44,7 +36,7 @@ const DisplayTodo = () => {
   return (
     <div className={styles["todos-container"]}>
       <h2>Todo List</h2>
-      <div className={styles["todos-list"]}>{renderTodoList(sortedTodos)}</div>
+      <div className={styles["todos-list"]}>{renderTodoList(todoItems)}</div>
     </div>
   );
 };
